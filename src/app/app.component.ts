@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+  <div><h1>{{title}}</h1>
+  <grid-list-dynamic></grid-list-dynamic>
+  </div>
+  `
 })
 export class AppComponent {
-  title = 'Capstone-FE';
+  title: string = 'Sentiment Analysis Dashboard';
 }
