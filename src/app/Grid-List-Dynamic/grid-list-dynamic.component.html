@@ -1,10 +1,12 @@
-<mat-grid-list cols="4" rowHeight="205px" gutterSize = "10px">
+<mat-grid-list cols="6" rowHeight="200px" gutterSize = "10px">
     <mat-grid-tile
         *ngFor="let tile of tiles"
         [colspan]="tile.cols"
         [rowspan]="tile.rows"
         [style.background]="tile.color">
-        <mat-grid-tile-header>{{tile.text}}</mat-grid-tile-header>
+        <mat-grid-tile-header [style.background] = "tile.color" [style.color] = "'black'">{{tile.text}}</mat-grid-tile-header>
+         <!-- <app-word-cloud></app-word-cloud> -->
+        <app-donut-chart></app-donut-chart>
     </mat-grid-tile>
 </mat-grid-list>
   
