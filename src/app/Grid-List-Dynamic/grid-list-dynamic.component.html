@@ -6,7 +6,15 @@
         [style.background]="tile.color">
         <mat-grid-tile-header [style.background] = "tile.color" [style.color] = "'black'">{{tile.text}}</mat-grid-tile-header>
          <!-- <app-word-cloud></app-word-cloud> -->
-        <app-donut-chart></app-donut-chart>
+         <div *ngIf="tile.text === 'Sentiment'">
+            <app-donut-chart></app-donut-chart>               
+        </div>
+        <div *ngIf="tile.text === 'What Are People Saying?'">
+            <app-comments></app-comments>              
+        </div>
+        <div *ngIf="tile.text === 'Top Posts'">
+            <app-top-posts></app-top-posts>
+        </div>
     </mat-grid-tile>
 </mat-grid-list>
   
