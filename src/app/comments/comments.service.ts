@@ -8,7 +8,7 @@ import { IComment } from './comments';
   providedIn: 'root'
 })
 export class CommentsService {
-  private commentUrl = '/api/topComments'
+  private commentUrl = '/api/comments'
 
   constructor(private http: HttpClient){}
 
