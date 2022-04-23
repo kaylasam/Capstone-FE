@@ -1,0 +1,9 @@
+.comment {
+    max-width: max-content;
+    padding: 20px;
+    padding-top: 5px;
+}
+.commentbox {
+    overflow-y: auto;
+    height: 400px;
+}

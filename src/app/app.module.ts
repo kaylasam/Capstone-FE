@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { TagCloudModule } from 'angular-tag-cloud-module';
 
 import { AppComponent } from './app.component';
-import { GridListDynamicComponent } from './grid-list-dynamic/grid-list-dynamic.component';
+import { GridListDynamicComponent } from './Grid-List-Dynamic/grid-list-dynamic.component';
 import { ChipsInputComponent } from './chips-input/chips-input.component';
 
 import { DonutChartComponent } from './charts/donut-chart/donut-chart.component';
 import { WordCloudComponent } from './charts/word-cloud/word-cloud.component';
+import { CommentsComponent } from './comments/comments.component';
+import { TopPostsComponent } from './top-posts/top-posts.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { WordCloudComponent } from './charts/word-cloud/word-cloud.component';
     GridListDynamicComponent,
     ChipsInputComponent,
     DonutChartComponent,
-    WordCloudComponent
+    WordCloudComponent,
+    CommentsComponent,
+    TopPostsComponent
   ],
   imports: [
     BrowserModule,
