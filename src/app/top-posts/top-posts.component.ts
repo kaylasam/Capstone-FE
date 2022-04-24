@@ -1,114 +1,83 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-top-posts',
   templateUrl: './top-posts.component.html',
   styleUrls: ['./top-posts.component.css']
 })
 export class TopPostsComponent implements OnInit {
+  showPopup: boolean = false;
+  topPost: any;
+  commentsOnPost: any;
   Comments =["Upvote this post to immediately delete the Walmart Radio		s7s2et	2011	158	https://www.reddit.com/r/walmart/comments/s7s2et/upvote_this_post_to_immediately_delete_the/",
   "We may have a problem		suc7fh	1654	408	https://v.redd.it/k6mqc481qai81",
   "Some moron brought a horse in my store		shttn7	1514	331	https://i.redd.it/o6htl2fht7f81.jpg",
   "Associates are leaving in droves and customers STILL coming in. they said manager won't excuse occurrences tonight but they're also home. I guess 'what's good for me but not for the'		sj5dyj	1251	263	https://i.redd.it/lv5csr5tnif81.jpg",
-  "fuck walmart.		skj2ks	1194	149	https://www.reddit.com/r/walmart/comments/skj2ks/fuck_walmart/",
-  "Crossover with r/antiwork		spkmzk	1173	217	https://i.redd.it/8nym7iyrh3h81.jpg",
-  "My man brought all the chicken breast in the store, there goes our ftpr :(		scgo04	1072	262	https://i.redd.it/imfven4huud81.jpg",
-  "You can't deny this call out 😘😏🤭❄️🧊		sjpl9g	1052	44	https://i.redd.it/p151nbtopnf81.jpg",
-  "'Excuse me, do you work here?'		skkw8b	992	226	https://i.redd.it/p6gh5fc23vf81.jpg",
-  "This is how we do it....		stuvcm	946	147	https://www.reddit.com/gallery/stuvcm",
-  "I have officially demoted myself to Walmart employee after being a sub lurker for a while!		sd99c3	927	374	https://i.redd.it/7pwtxk6v12e81.jpg",
-  "Customers are really this dumb?		sq98q0	894	439	https://i.redd.it/jw8caof5o9h81.jpg",
-  "They took away almost all the seating in our break room, there’s literally not anywhere to sit most of the time. I’ve had to start taking my lunches at weird times to catch an empty chair 😭		se4ei1	891	269	https://i.redd.it/91wn37h3s9e81.jpg",
-  "Some sick freak was following a woman for 30 minutes jerking off to her until she found AP. She caught these images by putting her phone in her back pocket.		sn7tpu	861	275	https://www.reddit.com/gallery/sn7tpu",
-  "I think we can all relate to this sentiment.		siqjqz	858	45	https://i.redd.it/x25tahi5off81.jpg",
-  "1 upvote = 1 hour of the Walmart Radio team shutting the fuck upm		snhlaf	837	68	https://www.reddit.com/r/walmart/comments/snhlaf/1_upvote_1_hour_of_the_walmart_radio_team/",
-  "Our coach just let us store use an rgb bluetooth speaker for unloading truck... I'm dying		sh9x7i	823	168	https://i.redd.it/1807v23rs2f81.jpg",
-  "Why is this so true with every samset picture? 😂		sl7cl8	808	29	https://i.redd.it/fhpqeijhr0g81.jpg",
-  "When the cat burglars are in the store, do i still use the keyboard to defend myself?		sbqndq	803	56	https://i.redd.it/9fj5o1ot1od81.jpg",
-  "Anyone else's store get this display?		sipdho	792	156	https://i.redd.it/sibjo6lkeff81.jpg",
-  "Today I accidently mistook a customer for a breakpack box and crushed him in the plastic baler.	On accident of course	ssb96v	760	102	https://www.reddit.com/r/walmart/comments/ssb96v/today_i_accidently_mistook_a_customer_for_a/",
-  "Target vs. Walmart Employees. I'll let the video do the talking.		sn61us	725	76	https://v.redd.it/cwh9z9629ig81",
-  "Unionize Walmart		siapuk	716	198	https://i.redd.it/mc992fbqbaf81.jpg",
-  "I see your 'buying all of the chicken breasts' guy and raise you my 'buying all of the propane' guy. Yeah we're almost always out of it lately too.		sd222f	713	187	https://www.reddit.com/gallery/sd222f",
-  "Everything comes full circle		slk016	705	75	https://i.redd.it/nn5no4aln3g81.jpg",
-  "Everyday.		sg3nyz	702	38	https://i.redd.it/627yz8rv0se81.jpg",
-  "walmart customers, fuck you nasty fucks.	the amount of dirty pigs who dont wash their hands after using the bathroom is mind blowing. associates too. if you are one of those people, fuck you.	sb0dm0	695	159	https://www.reddit.com/r/walmart/comments/sb0dm0/walmart_customers_fuck_you_nasty_fucks/",
-  "Anyone else's store out of cat food?		snl1xt	698	240	https://i.redd.it/wv6m44c89mg81.jpg",
-  "pizzer		so0jb6	677	33	https://i.redd.it/bfl2kchekpg81.gif",
-  "We had to take an 'anonymous' survey at work today. This is my somewhat strongly worded response.		sb4c5i	670	149	https://i.redd.it/8fs6gzmbxgd81.jpg",
-  "Logan WV store 2610	Why would you deny a doctor's request for extended medical leave for an old woman terminally ill with cancer? Why would you put her back on the schedule and fire her for 'three no call no shows' during this? You expected her to come back while she's in the ICU trying to beat stage 4 cancer and denied an extended medical leave requested from a doctor? I hope you can answer to this Ben. You and your team are fucked up disgusting people and I hope ya'll get sued to high hell.	soolf9	672	108	https://www.reddit.com/r/walmart/comments/soolf9/logan_wv_store_2610/",
-  "Found my grandpas old Walmart ID		sov43x	674	49	https://i.redd.it/ve0b67kc3xg81.jpg",
-  "My Walmart is quickly turning into Walmart Reddit. This all happened within days of each other.		smdzzq	624	91	https://www.reddit.com/gallery/smdzzq",
-  "Meet our new associate Dwyane!		sm62fb	620	37	https://i.redd.it/9ke39r5ir9g81.jpg",
-  "👀		sp9ww5	626	17	https://i.redd.it/qgoduf4n31h81.jpg",
-  "Man I felt this one		steubs	620	46	https://i.redd.it/c7o1uku1m2i81.jpg",
-  "Accidentally printed my W2 on shelf labels 🤡		sf7dna	578	29	https://i.redd.it/nycxrzpldje81.jpg",
-  "*went to check*		seyc0r	570	126	https://i.redd.it/yp56wcynahe81.png",
-  "Fucking Customers	Today I was asked if I could stay an hour extra since we were short on cashiers. I stayed until 5:00 PM and a little before I was ready to leave this bitch comes in my line. To set the tone this lady was in our store yelling for about two hours in one of the service areas. I was on the Smoke Shop and I am one of the faster cashiers and was finishing up helping this elderly gentlemen make sure he got his bags. This bitch as I'm getting his stuff has the nerve to tell me that I made her miss her public transportation. Um? No you did that yourself by not using time management. She then has the nerve to say well since you made me miss the bus I'll make the line back up and then tells me to double bag all of her stuff which wasn't even worthy of being double bagged. She then roots through her change and says I'll go slow as possible to make your line longer (something to that extent). I finally had enough. I said it's not my fault you missed your bus, I don't make my customers rush to get out of my line, and you should be glad I stayed to even help with cashiering. I am tired of these customers thinking we're doormats and they can walk all over us. She then was like I don't need your dissertation. Well maybe learn what words mean before you say them, because a dissertation is something you write for college LOL! *edited* I was shocked that she came back today and apologized.	ssog4o	574	98	https://www.reddit.com/r/walmart/comments/ssog4o/fucking_customers/",
-  "When coaches offer to help		smn9xc	562	18	https://v.redd.it/8im5c13i2eg81",
-  "everyone called out this morning	my team lead seriously texted me at 6 this morning to say neither her or the other opener would be there when i came in at 9, and there's no one scheduled for a midshift. the next person to come in is at 4 I'm electronics. I called out fuck that	sh0o0j	563	77	https://www.reddit.com/r/walmart/comments/sh0o0j/everyone_called_out_this_morning/",
-  "I intentionally shame people who don't return shopping carts	If i see someone just leave their cart by their car, I stare them down and shake my head at them. Not much, but that's what I do. Fuck these fat, lazy, gluttonous, entitled fucking pigs. Most of them could use the extra steps tbh	su1pdl	557	136	https://www.reddit.com/r/walmart/comments/su1pdl/i_intentionally_shame_people_who_dont_return/",
-  "I only come to work for the pizza		smrxya	548	43	https://i.redd.it/171dceupbfg81.jpg",
-  "The dream		sfj505	550	114	https://i.imgur.com/gH7EmaY.gifv",
-  "Saw this…		skt0t4	545	190	https://i.redd.it/tkvtxpasrwf81.jpg",
-  "Oh no, I accidently locked my store manager in a trailer and they got taken to the the distribution center.		suqw8g	641	78	https://www.reddit.com/r/walmart/comments/suqw8g/oh_no_i_accidently_locked_my_store_manager_in_a/",
-  "Shaq love		ssopw7	531	31	https://v.redd.it/k4gvoqxl7uh81",
-  "Our lovely day. All the registers are completely down and our store is closed lol		sbpoo1	525	62	https://i.redd.it/x8g4zrc3und81.jpg",
-  "i finally resigned from walmart	# im going to college	s9g2ls	517	81	https://www.reddit.com/r/walmart/comments/s9g2ls/i_finally_resigned_from_walmart/",
-  "This is on a post outside of Walmart. America in one picture.		srt4gg	508	236	https://i.redd.it/6dor79ft1oh81.jpg",
-  "New vest		sqy7y0	510	61	https://i.redd.it/f2uvjcbr6gh81.jpg",
-  "The guy who fucked with Walmart employees is surprised when they remembered 🙂		sc56j6	504	77	https://v.redd.it/1dsoixu82od81",
-  "Trying to work		sgq5xi	503	40	https://i.redd.it/9p7l3i6bsxe81.jpg",
-  "Mask Update		sqdbqx	491	468	https://i.redd.it/pbwi0dgekah81.jpg",
-  "I was one of 4 OGP associates who showed up today, we had around 25-30 associates TOTAL at the store today... at least we got some good ol walmart style appreciation for it 💀		sj1688	480	69	https://www.reddit.com/gallery/sj1688",
-  "This has got to be the most annoying shit ever		sagmh0	478	120	https://v.redd.it/ha970pmq1cd81",
-  "Yo I just zoned this end cap, only took me 1 hour and 45 minutes. Get on my level dudes		s8o8lp	470	32	https://i.redd.it/w5pr3j7kovc81.jpg",
-  "I see you Buying All The Chicken and All The Propane Guys, and I raise you Buying All The Mountain Dew Guy!		sdftap	459	65	https://i.redd.it/8zullyoof3e81.jpg",
-  "Management at my store is coaching people for having drinks now	Is Walmart gonna give me free PPTO + emotional damages and pay my hospital bill when I start pissing rocks? This place has me FUCKED up if management thinks I’m neglecting a basic biological need for $15 an hour lmao	sgamqi	460	165	https://www.reddit.com/r/walmart/comments/sgamqi/management_at_my_store_is_coaching_people_for/",
-  "Me when I’m told to zone stationary		slr74v	460	35	https://i.redd.it/cr91mghx26g81.jpg",
-  "Am I the only one finding it crazy that Walmart isn’t bumping up the pay increase for this year? 2% is not even close to covering inflation.		sa94fc	458	274	https://www.reddit.com/r/walmart/comments/sa94fc/am_i_the_only_one_finding_it_crazy_that_walmart/",
-  "I’m a regular associate in frozen/dairy. They gave me my fmr TLs radio and keys, what do I do now.		sdmns7	457	218	https://i.redd.it/5oajnnriz4e81.jpg",
-  "Coworker clocks in and leaves.		smthnw	452	278	https://www.reddit.com/r/walmart/comments/smthnw/coworker_clocks_in_and_leaves/",
-  "Got promoted	To customer because i cussed some bitch out and slapped her car with my hand after she honked at me and got out and said i should have watched out. She went over the yellow lines and was a foot away from hitting me and the cart machine, i was in front of her when i almost got hit. She told me to move my carts and i cussed her out more and then told her follow road laws. She reported me and my coach came and got me and the other lady in there started yelling at me, i yelled back at them and told them to calm down and they got even more pissed. They even threatened to call the cops on me, i told them they couldn't do anything and i just sat there and then they fired me lol. Atleast I'll be home for the Superbowl tomorrow and not be working 2-10. I flipped my coach off at the end and he said hed call the cops on me as i was literally a foot from being outside and once i got in the parking lot they cant do anything. Feels good. Fuck Walmart	sr23iw	448	105	https://www.reddit.com/r/walmart/comments/sr23iw/got_promoted/",
-  "Bro Walmart is going to have to catch up with the pay.		sfzti3	450	206	https://i.redd.it/agzh52b5xqe81.jpg",
-  "This happens way too much		sqz85h	446	11	https://v.redd.it/qmq4lnmsegh81",
-  "Customers who ask me for help when I have my coat on and my vest bunched up in my hand clearly leaving work...	Bye bitch	sf22kv	442	119	https://www.reddit.com/r/walmart/comments/sf22kv/customers_who_ask_me_for_help_when_i_have_my_coat/",
-  "I thought this belonged here for real. 🤣😅😂		sk2s6w	438	23	https://i.redd.it/8l4kk744iqf81.jpg",
-  "These pranks are not funny I catch anyone doing this I'm going to lose it		sbu3gm	435	176	https://v.redd.it/po72dlh3sod81",
-  "I’m a cart pusher and I got hit by a car while working	So I just came to the hospital after I was hit, what will happen? I’m worried because I don’t have health insurance and I was planning to go to college with what I have. I’m super worried and scared	snz8t7	427	225	https://www.reddit.com/r/walmart/comments/snz8t7/im_a_cart_pusher_and_i_got_hit_by_a_car_while/",
-  "Receipt Checking	If you don’t want to show your receipt, that’s fine, If you want to say no thank you, that’s fine, but for the love of god, please do not cause a scene and cuss and scream at retail workers over it, especially not in front of your children. We’re simply doing our jobs. That’s it	sghvut	427	132	https://www.reddit.com/r/walmart/comments/sghvut/receipt_checking/",
-  "We’re turning into an Amazon warehouse.		sd6y4g	420	90	https://i.redd.it/u1qdegc9j1e81.jpg",
-  "Doggos of Walmart: Day 46. This is Chenny. Isn't she the most perfect marshmallow you've ever seen? She almost looks like a toy! So photogenic.		s9uxdn	411	56	https://www.reddit.com/gallery/s9uxdn",
-  "O/N Shift....Worst part of the shift is when morning crew starts moseying in.	They are so loud. Leave me alone and let me pretend like you're not here	seobeg	409	172	https://www.reddit.com/r/walmart/comments/seobeg/on_shiftworst_part_of_the_shift_is_when_morning/",
-  "One store has 120 call outs they just need 5 more for corporate to shut the store down.		sjwgmf	401	91	https://www.reddit.com/r/walmart/comments/sjwgmf/one_store_has_120_call_outs_they_just_need_5_more/",
-  "Fed up	All you pieces of shit who are taking advantage of the paid covid leave fuck you. I'm giving a special fuck you to Felicia from the deli who is on her third paid covid leave and she's never had covid. FUCK YOU FELICIA	sabpzl	401	183	https://www.reddit.com/r/walmart/comments/sabpzl/fed_up/",
-  "I too have selective hearing		sryet9	400	29	https://i.redd.it/cdoaotgxbph81.jpg",
-  "Update to my store. THERE IS NO ONE HERE OGP IS CLOSED SUBWAY IS CLOSED DELI IS CLOSED THERE IS ONLY ONE SELF CHECK OUT BAY OPRN THERE ARE LIKE 20 PEOPLE STAFF HERE.		sjtjkj	391	115	https://www.reddit.com/gallery/sjtjkj",
-  "Accidentally threw my tc instead of the dented can in my other hand into the compactor, made to fish it out.	Title explains it well enough, was made to crawl into the compactor to get my TC. Do I ethics report this? Open door it? Update: got called into the office as soon as I walked in today. Was met with having to watch myself climb into it on CCTV camera. I got a red coaching, and have to take 2 1 hour OSHA policy training courses at my community center next MONTH. Not sure what happens to the coach. Update 2: stop asking me why I did it lol Last update: coach is going to be transferred from what I hear.	s913co	386	220	https://www.reddit.com/r/walmart/comments/s913co/accidentally_threw_my_tc_instead_of_the_dented/",
-  "ON Maintenance. Every day. Same stall		sap5rx	387	80	https://i.redd.it/nb0yo51aged81.jpg",
-  "How was he not immediately caught with the hood		su2h2a	395	69	https://i.redd.it/1dzqiphll8i81.jpg",
-  "Shoutout to the couple who orders all of our whipping cream once a week		skzmjm	389	86	https://www.reddit.com/gallery/skzmjm",
-  "Done with them breakpacks yet?		sa4z8y	374	47	https://i.redd.it/wq6o76qid9d81.jpg",
-  "🤦🏾‍♂️		sfvjh1	381	69	https://i.redd.it/kovmwk3nupe81.jpg",
-  "wHy aRe YaLl oUt oF evErYthiNg?!??!?!?! (Both carts were as full as the one on the right)		sbzf77	380	81	https://i.redd.it/913wvsi2xpd81.jpg",
-  "COVID LEAVE TERMINATIONS. PLEASE READ.	Our local Walmart has been terminating people on covid leave and encouraging people to lie on their screenings. I have referred several to Ethics. If you have seen or see this going on please report it Ethics and use the open door. It is a violation of Walmart policy, CDC Guidelines and OSHA guidelines. Walmart is putting profits above the safety of its employees, customers and communities. I think it is time to clean up the company.	s8cxhx	374	82	https://www.reddit.com/r/walmart/comments/s8cxhx/covid_leave_terminations_please_read/",
-  "And I'm depressed now...		sc8w2l	372	62	https://i.redd.it/mkpsqfxinsd81.jpg",
-  "The most disappointing feeling 😩		spcjjk	371	10	https://i.redd.it/zzjvicv2o1h81.jpg",
-  "It's 2022...	I don't feel bad for not helping old people with their cellphones. They've been out for a long time now. If an old person is too stubborn to learn, then it's their own fault. No, I won't put time on your phone. Read the card No, I won't change your phone settings for you. No, your SIM card isn't your fucking storage. They want to argue with you, then raise their voice when you try to explain to them how to do it, and demand you do it for them. Because,'I don't know nuthin' about these damn SmArT pHoNeS.'	srpnby	369	128	https://www.reddit.com/r/walmart/comments/srpnby/its_2022/",
-  "Gameday is *your* day!		sq0clh	370	28	https://v.redd.it/vzlvqie3p7h81",
-  "me when i see an unattended topstock cart		shdnrc	362	52	https://i.redd.it/7xslgh7cj3f81.jpg",
-  "PSA for all Cashiers, Front End Team Leads, and Front End Coaches. Please pay attention to your debit readers everyday. As a Front end team Lead that lives in a small town in the desert, I never thought this would happen to us, but it did. I found this on our busiest register. Please be careful!!!		sle60k	359	73	https://i.redd.it/wbez5eevb2g81.jpg",
-  "Take care of yourself do what is best for you not the company!		s8ybj5	357	27	https://i.redd.it/8esfbukk0yc81.jpg",
-  "Store manager completely banned drinking	So yesterday in my neighborhood market our store manager decided to completely ban water bottles, thermos or any source of H2O. We use to take a water case from the floor, and leave it on the cooler for every associate. But he showed up arguing that those waters are supposed to be for customers and he even asked me when I said (cuz I’m an OGP associate) we need water when we’re outside “well customers do too, and how many times have offered them one?” He then said that if management sees someone carrying on their pockets or drinking water in the store (doesn’t matter if it’s in a thermo or a water bottle from the store) they’ll be getting either a write up or coaching. Also, he does not want to see water bottles anywhere in the store. My question is, am I able to take this to open door or some stuff? I work in the floor some times as well and feels inhuman to be treated like this…	smcjab	355	154	https://www.reddit.com/r/walmart/comments/smcjab/store_manager_completely_banned_drinking/",
-  "We aren’t paid enough		sdlzb6	352	131	https://v.redd.it/p3v2nstne4e81",
-  "Y'all see this at your store???		sdmdws	354	137	https://i.redd.it/4cymbj06x4e81.jpg",
-  "Just wanted to share this		soivqj	350	26	https://www.reddit.com/gallery/soivqj",
   "Got reported :,)	I was stocking groceries for the entire day and decided to put in one of my airpods to make the day go by faster. I ended up calling one of my friends while doing my jobs (and essentially showing them what I do for a living) until I got stopped by this old guy. The conversation goes as following: Old Guy: Excuse me, (name), are you on break? Me: Nope. Just stocking. Old Guy: You shouldn’t be talking to anyone while stocking. Me: Alright, sorry about that. I showed him that I hung up and thought that was the end of it, but BOY was I wrong. One of the people working with him pulls me aside and tells me that if old guy catches me on my phone again, he’s gonna report me. Keep in mind: this guy HATES old guy, so we kinda just laugh it off. The minute I go back to stocking, all my coworkers tell me that Old Guy told everyone he reported me. Not only that, but he followed us around non-stop while pretending to zone. I hit my limit and clocked out early. I already talked to a manager, so I’m covered. The whole situation kinda pissed me off though, so I just wanted to vent. And for the record: I am aware I shouldn’t have been on my phone. You don’t need to remind me.	smgub9	347	186	https://www.reddit.com/r/walmart/comments/smgub9/got_reported/",
   "Just wanted to vent real quick and make sure that I’m not missing something	I just got done filling the water aisle. This older lady asked me to help her get down two zephyr hills water gallons, because she couldn’t reach them. I couldn’t either, so I reached underneath them and used my box cutter to pull them closer to me, that round end of it, so I could grab them. She kinda looked at me hesitantly, and said, “there’s no metal in them now, from you using that on them right?” I was at a loss for words and didn’t really know what to say, and pretty much said no. She said, “because they’re for Guinea pigs, so I need to make sure there’s no shards or anything in them.” Still flabbergasted, I kinda stammered, moved the cutter around in like a weird 360° view, and gave a dumb response, (because I was still so confused) and said, “no, it’s a safety cutter.” And walked away. I noticed she didn’t leave the aisle after I left. So I waited a second and then peeked back down the aisle. And lo’ and behold, she was struggling to get down two different ones because she must have believed that I was an evil Guinea pig killer, who magically can put pieces of metal inside a container of water, without making it leak. I wanted so bad to say something to her, but I knew it wasn’t worth it. Not that I wish harm on anyone, but I was kind of hoping that one might fall down and bonk her on the head, for wasting my time.	sl4dvg	349	49	https://www.reddit.com/r/walmart/comments/sl4dvg/just_wanted_to_vent_real_quick_and_make_sure_that/",
   "I’m so tired of this freaking company. Reason #45"];
+  data = {"SubReddit": {
+            "r/wallmart": {
+              "TopPosts": [{
+                    "NumberOfComments": "20",
+                    "PostText": "This is the text that represents the post", 
+                    "TopPostAnalysis": {
+                      "good": "30",
+                      "bad":"40",
+                      "neutral":"30"},
+                    "TopComments": [{"comment":"this is cool",
+                                      "rating":"1"},
+                                      {"comment":"i hate this app",
+                                      "rating":"0"},
+                                      {"comment":"help me",
+                                      "rating":"2"},
+                                      {"comment":"walmart is the worst place in the world",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"},
+                                      {"comment":"deth",
+                                      "rating":"1"}]
+        },
+        {
+          "NumberOfComments": "20",
+          "PostText": "post text example", 
+          "TopPostAnalysis": {
+            "good": "30",
+            "bad":"40",
+            "neutral":"30"},
+          "TopComments": [{"comment":"text2",
+                            "good":"30","bad":"40","neutral":"30"}]
+        },],
+        "SubRedditAnalysis": {
+            "Good": "30%",
+            "Bad": "40%",
+            "Neutral": "30%"
+        }
+    }
+}};
+  result = this.data.SubReddit['r/wallmart'].TopPosts;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  OpenPopup(post: any): void {
+    this.showPopup = !this.showPopup;
+    this.topPost = post;
+    this.commentsOnPost = post.TopComments;
+    console.log(this.commentsOnPost);
+  }
+  
 }

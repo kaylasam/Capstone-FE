@@ -1,5 +1,39 @@
+<!-- <ul>
+    <div class="commentbox">
+        <div class="comment" *ngFor="let comment of Comments">
+            <div (click)="OpenPopup(comment)" class="line">{{comment}}</div>
+            <div *ngIf="showPopup==true" class="popup"></div>
+        </div>
+    </div>
+</ul> -->
 <ul>
     <div class="commentbox">
-        <div class="comment" *ngFor="let comment of Comments">{{comment}}</div>
+        <div class="comment" *ngFor="let comment of result">
+            <div (click)="OpenPopup(comment)" class="line">{{comment.PostText}}</div>
+            <div *ngIf="showPopup==true" class="popup"></div>
+        </div>
     </div>
 </ul>
+<p-dialog style="background-color: green;"class="popup" header="topPost" appendTo="body" [baseZIndex]="10000" [(visible)]="showPopup">
+    <ng-template pTemplate="header">
+        Post: {{topPost.PostText}}
+        <br>
+        Total Comments: {{topPost.NumberOfComments}}
+    </ng-template>
+    Comments:
+    <div class="comment" *ngFor="let comment of commentsOnPost">
+        {{comment.comment}}
+        <div *ngIf="comment.rating == '1'">
+            Rating: <div style="display:inline; color:Green">Good</div>
+        </div>
+        <div *ngIf="comment.rating == '2'">
+            Rating: <p style="display:inline; color:red">Bad</p>
+        </div>
+        <div *ngIf="comment.rating == '0'">
+            Rating: <p style="display:inline; color:Grey">Neutral</p>
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <app-donut-chart></app-donut-chart>
+    </ng-template>
+</p-dialog>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from 'src/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,7 +13,8 @@ import { DonutChartComponent } from './charts/donut-chart/donut-chart.component'
 import { WordCloudComponent } from './charts/word-cloud/word-cloud.component';
 import { CommentsComponent } from './comments/comments.component';
 import { TopPostsComponent } from './top-posts/top-posts.component';
-
+import { PostPopUpComponent } from './post-pop-up/post-pop-up.component';
+import {DialogModule} from 'primeng/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,16 +23,19 @@ import { TopPostsComponent } from './top-posts/top-posts.component';
     DonutChartComponent,
     WordCloudComponent,
     CommentsComponent,
-    TopPostsComponent
+    TopPostsComponent,
+    PostPopUpComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
-    TagCloudModule
+    TagCloudModule,
+    DialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  //schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
