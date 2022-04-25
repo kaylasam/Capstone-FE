@@ -21,19 +21,26 @@
         Total Comments: {{topPost.NumberOfComments}}
     </ng-template>
     Comments:
-    <div class="comment" *ngFor="let comment of commentsOnPost">
-        {{comment.comment}}
-        <div *ngIf="comment.rating == '1'">
+    <div class="comment" *ngFor="let postComment of postComments">
+        {{postComment.comment}}
+        <div *ngIf="postComment.rating == '1'">
             Rating: <div style="display:inline; color:Green">Good</div>
         </div>
-        <div *ngIf="comment.rating == '2'">
+        <div *ngIf="postComment.rating == '2'">
             Rating: <p style="display:inline; color:red">Bad</p>
         </div>
-        <div *ngIf="comment.rating == '0'">
+        <div *ngIf="postComment.rating == '0'">
             Rating: <p style="display:inline; color:Grey">Neutral</p>
         </div>
     </div>
     <ng-template pTemplate="footer">
-        <app-donut-chart></app-donut-chart>
+        <!-- <app-donut-chart></app-donut-chart> -->
+        <div class="comment" *ngFor="let postAnalysis of postAnalyses">
+            Good: {{postAnalysis.good}}
+            <br>
+            Neutral: {{postAnalysis.neutral}}
+            <br>
+            Bad: {{postAnalysis.bad}}
+        </div>
     </ng-template>
 </p-dialog>

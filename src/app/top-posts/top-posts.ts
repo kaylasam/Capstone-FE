@@ -4,11 +4,20 @@ export interface ITopComments {
     rating: string;
 }
 
+export interface ITopPostAnalyses {
+    good: string;
+    neutral: string;
+    bad: string;
+}
+
 export interface ITopPost {
     id: number;
     NumberOfComments: string;
-    PostText: string
+    PostText: string;
     TopComments: {
         [key: string]: ITopComments
+    };
+    TopPostAnalyses: {
+        [key: string]: ITopPostAnalyses
     };
 }

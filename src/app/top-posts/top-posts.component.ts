@@ -16,7 +16,8 @@ export class TopPostsComponent implements OnInit {
   constructor(private topPostsService: TopPostsService) { }
   showPopup: boolean = false;
   topPost: any;
-  commentsOnPost: any;
+  postComments: any;
+  postAnalyses: any;
 
   ngOnInit(): void {
     this.sub = this.topPostsService.getTopPosts().subscribe({
@@ -27,8 +28,10 @@ export class TopPostsComponent implements OnInit {
   OpenPopup(post: any): void {
     this.showPopup = !this.showPopup;
     this.topPost = post;
-    this.commentsOnPost = post.TopComments;
-    console.log(this.commentsOnPost);
+    this.postComments = post.TopComments;
+    this.postAnalyses = post.TopPostAnalyses;
+    console.log(this.postComments);
+    console.log(this.postAnalyses);
   }
   
 }

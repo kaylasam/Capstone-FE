@@ -25,6 +25,13 @@
           "comment":"walmart is the worst place in the world",
           "rating":"1"
         }
+      ],
+      "TopPostAnalyses": [
+        {
+          "good": "10",
+          "neutral": "60",
+          "bad": "30"
+        }
       ]
     },
     {
@@ -37,6 +44,13 @@
           "comment":"text2",
           "rating": "1"
         }
+      ],
+      "TopPostAnalyses": [
+        {
+          "good": "20",
+          "neutral": "40",
+          "bad": "40"
+        }
       ]
     },
     {
@@ -48,6 +62,13 @@
           "id": 1,
           "comment":"text3",
           "rating": "2"
+        }
+      ],
+      "TopPostAnalyses": [
+        {
+          "good": "30",
+          "neutral": "40",
+          "bad": "30"
         }
       ]
     }
