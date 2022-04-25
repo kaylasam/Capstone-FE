@@ -1,4 +1,57 @@
 {
+  "TopPost": [
+    {
+      "id": 1,
+      "NumberOfComments": "20",
+      "PostText": "This is the text that represents the post", 
+      "TopComments": [
+        {
+          "id": 1,
+          "comment":"this is cool",
+          "rating":"1"
+        },    
+        {
+          "id": 2,
+          "comment":"i hate this app",
+          "rating":"0"
+        },
+        {
+          "id": 3,
+          "comment":"help me",
+          "rating":"2"
+        },
+        {
+          "id": 4,
+          "comment":"walmart is the worst place in the world",
+          "rating":"1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "NumberOfComments": "20",
+      "PostText": "post text example",
+      "TopComments": [
+        {
+          "id": 1,
+          "comment":"text2",
+          "rating": "1"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "NumberOfComments": "20",
+      "PostText": "post text example #2",
+      "TopComments": [
+        {
+          "id": 1,
+          "comment":"text3",
+          "rating": "2"
+        }
+      ]
+    }
+  ],
     "comments": [
       {
         "id": 1,

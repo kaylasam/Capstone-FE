@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from 'src/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,9 +14,14 @@ import { DonutChartComponent } from './charts/donut-chart/donut-chart.component'
 import { WordCloudComponent } from './charts/word-cloud/word-cloud.component';
 import { CommentsComponent } from './comments/comments.component';
 import { TopPostsComponent } from './top-posts/top-posts.component';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 // import { HighchartsChartModule } from 'highcharts-angular';
 
+=======
+import { PostPopUpComponent } from './post-pop-up/post-pop-up.component';
+import {DialogModule} from 'primeng/dialog';
+>>>>>>> ui-update
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     DonutChartComponent,
     WordCloudComponent,
     CommentsComponent,
-    TopPostsComponent
+    TopPostsComponent,
+    PostPopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +40,14 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     SharedModule,
     TagCloudModule,
+<<<<<<< HEAD
     // HighchartsChartModule
+=======
+    DialogModule,
+>>>>>>> ui-update
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  //schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

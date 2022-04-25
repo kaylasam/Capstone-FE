@@ -6,10 +6,10 @@
         [style.background]="tile.color">
         <mat-grid-tile-header [style.background] = "tile.color" [style.color] = "'black'">{{tile.text}}</mat-grid-tile-header>
          <!-- <app-word-cloud></app-word-cloud> -->
-         <div *ngIf="tile.text === 'Sentiment'">
+         <div *ngIf="tile.text === 'Overall Sentiment'">
             <app-donut-chart></app-donut-chart>               
         </div>
-        <div *ngIf="tile.text === 'What Are People Saying?'">
+        <div *ngIf="tile.text === 'All Comments'">
             <app-comments></app-comments>              
         </div>
         <div *ngIf="tile.text === 'Top Posts'">

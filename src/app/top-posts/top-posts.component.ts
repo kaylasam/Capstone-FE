@@ -14,6 +14,11 @@ export class TopPostsComponent implements OnInit {
   topPosts: ITopPost[] = [];
 
   constructor(private topPostsService: TopPostsService) { }
+  showPopup: boolean = false;
+  topPost: any;
+  commentsOnPost: any;
+
+  result = this.data.TopPosts;
 
   ngOnInit(): void {
     this.sub = this.topPostsService.getTopPosts().subscribe({
@@ -21,5 +26,11 @@ export class TopPostsComponent implements OnInit {
       error: (err: string) => this.errorMessage = err
     });
   }
-
+  OpenPopup(post: any): void {
+    this.showPopup = !this.showPopup;
+    this.topPost = post;
+    this.commentsOnPost = post.TopComments;
+    console.log(this.commentsOnPost);
+  }
+  
 }
