@@ -18,8 +18,6 @@ export class TopPostsComponent implements OnInit {
   topPost: any;
   commentsOnPost: any;
 
-  result = this.data.TopPosts;
-
   ngOnInit(): void {
     this.sub = this.topPostsService.getTopPosts().subscribe({
       next: (topPosts: ITopPost[]) => this.topPosts = topPosts,

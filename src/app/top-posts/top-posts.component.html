@@ -8,8 +8,8 @@
 </ul> -->
 <ul>
     <div class="commentbox">
-        <div class="comment" *ngFor="let comment of result">
-            <div (click)="OpenPopup(comment)" class="line">{{comment.PostText}}</div>
+        <div class="comment" *ngFor="let topPost of topPosts">
+            <div (click)="OpenPopup(topPost)" class="line">{{topPost.PostText}}</div>
             <div *ngIf="showPopup==true" class="popup"></div>
         </div>
     </div>

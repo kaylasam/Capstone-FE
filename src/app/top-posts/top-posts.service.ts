@@ -9,7 +9,7 @@ import { Observable, throwError} from 'rxjs';
 })
 export class TopPostsService {
 
-  private topPostUrl = '/api/topPosts'
+  private topPostUrl = '/api/TopPost'
 
   constructor(private http: HttpClient){}
 
@@ -20,6 +20,7 @@ export class TopPostsService {
         catchError(this.handleError)
       );
   }
+
 
   private handleError(err: HttpErrorResponse): Observable<never> {
     // in a real world app, we may send the server to some remote logging infrastructure

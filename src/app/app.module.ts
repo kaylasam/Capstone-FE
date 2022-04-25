@@ -14,14 +14,11 @@ import { DonutChartComponent } from './charts/donut-chart/donut-chart.component'
 import { WordCloudComponent } from './charts/word-cloud/word-cloud.component';
 import { CommentsComponent } from './comments/comments.component';
 import { TopPostsComponent } from './top-posts/top-posts.component';
-<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 // import { HighchartsChartModule } from 'highcharts-angular';
 
-=======
 import { PostPopUpComponent } from './post-pop-up/post-pop-up.component';
 import {DialogModule} from 'primeng/dialog';
->>>>>>> ui-update
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,11 +37,8 @@ import {DialogModule} from 'primeng/dialog';
     FormsModule,
     SharedModule,
     TagCloudModule,
-<<<<<<< HEAD
     // HighchartsChartModule
-=======
     DialogModule,
->>>>>>> ui-update
   ],
   providers: [],
   bootstrap: [AppComponent],
