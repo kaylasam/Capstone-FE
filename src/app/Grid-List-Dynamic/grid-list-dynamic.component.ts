@@ -17,9 +17,8 @@ export interface Tile {
 })
 export class GridListDynamicComponent {
   tiles: Tile[] = [
-    {text: 'Overall Sentiment', cols: 2, rows: 2, color: 'lightgreen'},
-    {text: 'All Comments', cols: 2, rows: 2, color: 'lightpink'},
-    {text: 'Mentions', cols: 2, rows: 2, color: '#DDBDF1'},
+    {text: 'Overall Sentiment', cols: 3, rows: 2, color: 'lightgreen'},
+    {text: 'All Comments', cols: 3, rows: 2, color: 'lightpink'},
     {text: 'Top Posts', cols: 6, rows: 2, color: 'lightblue'},
     // {text: 'Top Post Sentiment', cols: 6, rows: 2, color: 'lightblue'},
   ];

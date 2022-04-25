@@ -1,4 +1,21 @@
 {
+  "AllPostsSentiment": [
+    {
+      "id": 1,
+      "Sentiment": "positive",
+      "Ratio": 70
+    },
+    {
+      "id": 2,
+      "Sentiment": "negative",
+      "Ratio": 0
+    },
+    {
+      "id": 3,
+      "Sentiment": "neutral",
+      "Ratio": 30
+    }
+  ],
   "TopPost": [
     {
       "id": 1,
