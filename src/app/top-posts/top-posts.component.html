@@ -34,14 +34,15 @@
         </div>
     </div>
     <ng-template pTemplate="footer">
+        <p style="float:left">Post Sentiment:</p>
         <!-- <app-donut-chart></app-donut-chart> -->
-        <div class="comment" *ngFor="let postAnalysis of postAnalyses">
+        <!-- <div class="comment" *ngFor="let postAnalysis of postAnalyses">
             Good: {{postAnalysis.good}}
             <br>
             Neutral: {{postAnalysis.neutral}}
             <br>
             Bad: {{postAnalysis.bad}}
-        </div>
+        </div> -->
         <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}"></p-chart>
     </ng-template>
 </p-dialog>
