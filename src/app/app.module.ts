@@ -16,7 +16,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { TopPostsComponent } from './top-posts/top-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 // import { HighchartsChartModule } from 'highcharts-angular';
-
+import { ChartModule } from 'primeng/chart';
 import { PostPopUpComponent } from './post-pop-up/post-pop-up.component';
 import {DialogModule} from 'primeng/dialog';
 @NgModule({
@@ -39,6 +39,7 @@ import {DialogModule} from 'primeng/dialog';
     TagCloudModule,
     // HighchartsChartModule
     DialogModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent],

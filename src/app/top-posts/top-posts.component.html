@@ -24,13 +24,13 @@
     <div class="comment" *ngFor="let postComment of postComments">
         {{postComment.comment}}
         <div *ngIf="postComment.rating == '1'">
-            Rating: <div style="display:inline; color:Green">Good</div>
+            Rating: <div style="display:inline; color:#00FF00">Good</div>
         </div>
         <div *ngIf="postComment.rating == '2'">
-            Rating: <p style="display:inline; color:red">Bad</p>
+            Rating: <p style="display:inline; color:#FF0000">Bad</p>
         </div>
         <div *ngIf="postComment.rating == '0'">
-            Rating: <p style="display:inline; color:Grey">Neutral</p>
+            Rating: <p style="display:inline; color:#808080">Neutral</p>
         </div>
     </div>
     <ng-template pTemplate="footer">
@@ -42,5 +42,6 @@
             <br>
             Bad: {{postAnalysis.bad}}
         </div>
+        <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}"></p-chart>
     </ng-template>
 </p-dialog>

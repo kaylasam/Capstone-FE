@@ -18,7 +18,8 @@ export class TopPostsComponent implements OnInit {
   topPost: any;
   postComments: any;
   postAnalyses: any;
-
+  data: any;
+  chartOptions: any;
   ngOnInit(): void {
     this.sub = this.topPostsService.getTopPosts().subscribe({
       next: (topPosts: ITopPost[]) => this.topPosts = topPosts,
@@ -31,7 +32,26 @@ export class TopPostsComponent implements OnInit {
     this.postComments = post.TopComments;
     this.postAnalyses = post.TopPostAnalyses;
     console.log(this.postComments);
-    console.log(this.postAnalyses);
+    console.log(this.postAnalyses.netural);
+    console.log("after");
+    this.data = {
+      labels: ['Neutral','Good','Bad'],
+      datasets: [
+          {
+              data: [post.TopPostAnalyses[0].neutral,post.TopPostAnalyses[0].good,post.TopPostAnalyses[0].bad],
+              backgroundColor: [
+                  "#a9a9a9",
+                  "#00FF00",
+                  "#FF0000"
+              ],
+              hoverBackgroundColor: [
+                "#808080",
+                "#013220",
+                "#8b0000",
+              ]
+          }
+      ]
+  };
   }
   
 }
