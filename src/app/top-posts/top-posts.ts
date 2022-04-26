@@ -14,9 +14,11 @@ export interface ITopPost {
     id: number;
     NumberOfComments: string;
     PostText: string;
-    TopComments: {
-        [key: string]: ITopComments
-    };
+    TopComments: [{
+        id: number;
+        comment: string;
+        polarity: number;
+    }];
     TopPostAnalyses: {
         [key: string]: ITopPostAnalyses
     };

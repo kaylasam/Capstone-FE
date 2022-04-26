@@ -1,5 +1,18 @@
 <ul>
     <div class="commentbox">
-        <div class="comment" *ngFor="let comment of comments">{{comment.comment}}</div>
+        <div class="comment" *ngFor="let Post of topPosts">
+            <div class="comment" *ngFor="let Comments of Post.TopComments">
+                {{Comments.comment}}
+                <div *ngIf="Comments.polarity > 0">
+                    Rating: <div style="display:inline; color:#00FF00">Positive</div> 
+                </div>
+                <div *ngIf="Comments.polarity < 0">
+                    Rating: <div style="display:inline; color:#FF0000">Negative</div>  
+                </div>
+                <div *ngIf="Comments.polarity == 0">
+                    Rating: <div style="display:inline; color:#808080">Neutral</div> 
+                </div>
+            </div>
+        </div>
     </div>
 </ul>
