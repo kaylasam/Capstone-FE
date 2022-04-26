@@ -31,9 +31,6 @@ export class TopPostsComponent implements OnInit {
     this.topPost = post;
     this.postComments = post.TopComments;
     this.postAnalyses = post.TopPostAnalyses;
-    console.log(this.postComments);
-    console.log(this.postAnalyses.netural);
-    console.log("after");
     this.data = {
       labels: ['Neutral','Good','Bad'],
       datasets: [

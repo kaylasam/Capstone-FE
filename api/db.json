@@ -25,22 +25,42 @@
         {
           "id": 1,
           "comment":"this is cool",
-          "rating":"1"
+          "polarity": 1
         },    
         {
           "id": 2,
           "comment":"i hate this app",
-          "rating":"0"
+          "polarity": 0
         },
         {
           "id": 3,
           "comment":"help me",
-          "rating":"2"
+          "polarity": -1
         },
         {
           "id": 4,
           "comment":"walmart is the worst place in the world",
-          "rating":"1"
+          "polarity": 1
+        },
+        {
+          "id": 5,
+          "comment":"this is cool",
+          "polarity": 1
+        },    
+        {
+          "id": 6,
+          "comment":"i hate this app",
+          "polarity": 0
+        },
+        {
+          "id": 7,
+          "comment":"help me",
+          "polarity": -1
+        },
+        {
+          "id": 8,
+          "comment":"walmart is the worst place in the world",
+          "polarity": 1
         }
       ],
       "TopPostAnalyses": [
@@ -59,7 +79,7 @@
         {
           "id": 1,
           "comment":"text2",
-          "rating": "1"
+          "polarity": 1
         }
       ],
       "TopPostAnalyses": [
@@ -78,7 +98,7 @@
         {
           "id": 1,
           "comment":"text3",
-          "rating": "2"
+          "polarity": -1
         }
       ],
       "TopPostAnalyses": [

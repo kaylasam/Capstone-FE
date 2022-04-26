@@ -1,11 +1,3 @@
-<!-- <ul>
-    <div class="commentbox">
-        <div class="comment" *ngFor="let comment of Comments">
-            <div (click)="OpenPopup(comment)" class="line">{{comment}}</div>
-            <div *ngIf="showPopup==true" class="popup"></div>
-        </div>
-    </div>
-</ul> -->
 <ul>
     <div class="commentbox">
         <div class="comment" *ngFor="let topPost of topPosts">
@@ -23,26 +15,18 @@
     Comments:
     <div class="comment" *ngFor="let postComment of postComments">
         {{postComment.comment}}
-        <div *ngIf="postComment.rating == '1'">
-            Rating: <div style="display:inline; color:#00FF00">Good</div>
+        <div *ngIf="postComment.polarity > 0">
+            Rating: <div style="display:inline; color:#00FF00">Positive</div>
         </div>
-        <div *ngIf="postComment.rating == '2'">
-            Rating: <p style="display:inline; color:#FF0000">Bad</p>
+        <div *ngIf="postComment.polarity < 0">
+            Rating: <p style="display:inline; color:#FF0000">Negative</p>
         </div>
-        <div *ngIf="postComment.rating == '0'">
+        <div *ngIf="postComment.polarity == 0">
             Rating: <p style="display:inline; color:#808080">Neutral</p>
         </div>
     </div>
     <ng-template pTemplate="footer">
         <p style="float:left">Post Sentiment:</p>
-        <!-- <app-donut-chart></app-donut-chart> -->
-        <!-- <div class="comment" *ngFor="let postAnalysis of postAnalyses">
-            Good: {{postAnalysis.good}}
-            <br>
-            Neutral: {{postAnalysis.neutral}}
-            <br>
-            Bad: {{postAnalysis.bad}}
-        </div> -->
         <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '40%'}"></p-chart>
     </ng-template>
 </p-dialog>

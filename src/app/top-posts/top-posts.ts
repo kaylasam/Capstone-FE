@@ -1,7 +1,7 @@
 export interface ITopComments {
     id: number;
     comment: string;
-    rating: string;
+    polarity: number;
 }
 
 export interface ITopPostAnalyses {
