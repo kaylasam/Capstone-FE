@@ -20,10 +20,8 @@ export class DonutChartComponent implements OnInit {
     this.sub = this.donutChartService.getSentiment().subscribe({
       next: (sentiment: IAllPostsSentiment[]) => {
         this.sentiment = sentiment;
-        console.log("Sentiment: ", sentiment);
         google.charts.load('current', {'packages':['corechart']});
         this.buildChart(this.sentiment);
-        console.log("sentiment: ", this.sentiment);
       },
       error: (err: string) => this.errorMessage = err
     });
@@ -33,9 +31,7 @@ export class DonutChartComponent implements OnInit {
     var renderChart=(chart:any)=>{
       var donutChartItems = [];
       donutChartItems.push(['Sentiment', 'Ratio']);
-      console.log("sentiment: ", sentiment);
       sentiment.forEach(sentiment => {
-        console.log("sentiment type:", sentiment.Sentiment);
         donutChartItems.push([sentiment.Sentiment, sentiment.Ratio]);
       });
       var data = google.visualization.arrayToDataTable(donutChartItems);
@@ -50,7 +46,6 @@ export class DonutChartComponent implements OnInit {
           2: {color: 'grey'}
         }
       }
-      console.log(data);
       chart().draw(data, options);
     }
     var donutChart = () => new google.visualization.PieChart(document.getElementById('donutchart'));
