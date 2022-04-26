@@ -10,20 +10,15 @@
     <ng-template pTemplate="header">
         Post: {{topPost.PostText}}
         <br>
+        <br>
         Total Comments: {{topPost.NumberOfComments}}
+        <br>
+        Post Upvotes: {{topPost.NumberOfUpvotes}}
     </ng-template>
     Comments:
     <div class="comment" *ngFor="let postComment of postComments">
         {{postComment.comment}}
-        <div *ngIf="postComment.polarity > 0">
-            Rating: <div style="display:inline; color:#00FF00">Positive</div>
-        </div>
-        <div *ngIf="postComment.polarity < 0">
-            Rating: <p style="display:inline; color:#FF0000">Negative</p>
-        </div>
-        <div *ngIf="postComment.polarity == 0">
-            Rating: <p style="display:inline; color:#808080">Neutral</p>
-        </div>
+        <p style="color: grey">Comment Upvotes: {{postComment.polarity}}</p> 
     </div>
     <ng-template pTemplate="footer">
         <p style="float:left">Post Sentiment:</p>

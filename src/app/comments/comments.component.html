@@ -3,15 +3,8 @@
         <div class="comment" *ngFor="let Post of topPosts">
             <div class="comment" *ngFor="let Comments of Post.TopComments">
                 {{Comments.comment}}
-                <div *ngIf="Comments.polarity > 0">
-                    Rating: <div style="display:inline; color:#00FF00">Positive</div> 
-                </div>
-                <div *ngIf="Comments.polarity < 0">
-                    Rating: <div style="display:inline; color:#FF0000">Negative</div>  
-                </div>
-                <div *ngIf="Comments.polarity == 0">
-                    Rating: <div style="display:inline; color:#808080">Neutral</div> 
-                </div>
+                <br>
+                <p style="color: grey">Comment Upvotes: {{Comments.polarity}}</p> 
             </div>
         </div>
     </div>

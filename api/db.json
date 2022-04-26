@@ -21,6 +21,7 @@
       "id": 1,
       "NumberOfComments": "20",
       "PostText": "This is the text that represents the post", 
+      "NumberOfUpvotes": "-40",
       "TopComments": [
         {
           "id": 1,
@@ -75,6 +76,7 @@
       "id": 2,
       "NumberOfComments": "20",
       "PostText": "post text example",
+      "NumberOfUpvotes": "500",
       "TopComments": [
         {
           "id": 1,
@@ -94,6 +96,7 @@
       "id": 3,
       "NumberOfComments": "20",
       "PostText": "post text example #2",
+      "NumberOfUpvotes": "-1398",
       "TopComments": [
         {
           "id": 1,
