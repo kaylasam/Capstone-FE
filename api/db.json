@@ -1,216 +1,103 @@
 {
   "AllPostsSentiment": [
-    {
-      "id": 1,
-      "Sentiment": "positive",
-      "Ratio": 70
-    },
-    {
-      "id": 2,
-      "Sentiment": "negative",
-      "Ratio": 0
-    },
-    {
-      "id": 3,
-      "Sentiment": "neutral",
-      "Ratio": 30
-    }
-  ],
+    {"id": 1, "Sentiment": "positive", "Ratio": 70},
+    {"id": 2, "Sentiment": "negative", "Ratio": 0},
+    {"id": 3, "Sentiment": "neutral", "Ratio": 30}],
   "TopPost": [
-    {
-      "id": 1,
-      "NumberOfComments": "20",
-      "PostText": "This is the text that represents the post", 
-      "NumberOfUpvotes": "-40",
+    { "id": 1,
+      "NumberOfComments": "4",
+      "PostText": "Who else still wearing a mask?", 
+      "NumberOfUpvotes": "617",
       "TopComments": [
-        {
-          "id": 1,
-          "comment":"this is cool",
-          "polarity": 1
-        },    
-        {
-          "id": 2,
-          "comment":"i hate this app",
-          "polarity": 0
-        },
-        {
-          "id": 3,
-          "comment":"help me",
-          "polarity": -1
-        },
-        {
-          "id": 4,
-          "comment":"walmart is the worst place in the world",
-          "polarity": 1
-        },
-        {
-          "id": 5,
-          "comment":"this is cool",
-          "polarity": 1
-        },    
-        {
-          "id": 6,
-          "comment":"i hate this app",
-          "polarity": 0
-        },
-        {
-          "id": 7,
-          "comment":"help me",
-          "polarity": -1
-        },
-        {
-          "id": 8,
-          "comment":"walmart is the worst place in the world",
-          "polarity": 1
-        }
-      ],
-      "TopPostAnalyses": [
-        {
-          "good": "10",
-          "neutral": "60",
-          "bad": "30"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "NumberOfComments": "20",
-      "PostText": "post text example",
-      "NumberOfUpvotes": "500",
+        {"id": 1, "comment":"Yea, I'm an ugly ass mf", "polarity": 564},    
+        {"id": 2, "comment":"Me, I'm not giving up how much I can mutter under my breath right in front of the customers just yet.", "polarity": 224},
+        {"id": 3, "comment":"Not currently but I probably will once allergy season begins.  It really did help curb my allergy symptoms last spring","polarity":111},
+        {"id": 4, "comment":"I work o/n. I wear a mask for the first hour and the last hour I work because that's when the store is open and customers gross me out.", "polarity": 72}], 
+        "TopPostAnalyses": [
+        {"good": "0", "neutral": "80", "bad": "20"}]},
+    { "id": 2,
+      "NumberOfComments": "3",
+      "PostText": "Psst Walmart, I know you've been reading this subreddit. How about another round of COVID bonuses? Cases are on the rise in thousands of your stores, we feel unsafe.",
+      "NumberOfUpvotes": "1157",
       "TopComments": [
-        {
-          "id": 1,
-          "comment":"text2",
-          "polarity": 1
-        }
-      ],
+        {"id": 1, "comment":"Not going to lie it's been stressful at our store.  We are understaffed from the great resignation and labor shortage as it is.  Now throw COVID LOA's into the mix and it's amazing we are operating.", "polarity": 303},
+        {"id": 1, "comment":"Your concern is important to us and we will address that with your store manager on our next virtual visist.  Were all in this together! Home Office, probably.", "polarity": 132},
+        {"id": 1, "comment":"Pfft they only read to make sure nobody is discussing a union.", "polarity": 95}],
       "TopPostAnalyses": [
-        {
-          "good": "20",
-          "neutral": "40",
-          "bad": "40"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "NumberOfComments": "20",
-      "PostText": "post text example #2",
-      "NumberOfUpvotes": "-1398",
-      "TopComments": [
-        {
-          "id": 1,
-          "comment":"text3",
-          "polarity": -1
-        }
-      ],
-      "TopPostAnalyses": [
-        {
-          "good": "30",
-          "neutral": "40",
-          "bad": "30"
-        }
-      ]
-    }
-  ],
-    "comments": [
-      {
-        "id": 1,
-        "comment": "Imagine they actually gave freight you needed instead of 3 pallets full of reeses that are already full from the pallets last month"
-      },
-      {
-        "id": 2,
-        "comment": "I hate department 82 so much"
-      },
-      {
-        "id": 3,
-        "comment": "The only acceptable department where plugging should be allowed. As long as correct sku"
-      },
-      {
-        "id": 4,
-        "comment": "Some of those ice cubes are oriented the same way in a forward backward pattern, except the 3 and it bugs me a lot."
-      },
-      {
-        "id": 5,
-        "comment": "This gives me fucking serotonin."
-      },
-      {
-        "id": 6,
-        "comment": "I'm totes addicted to the Ice Cube gums and want all of them I see here. Beautiful!!"
-      },
-      {
-        "id": 7,
-        "comment": "Can you teach our people to do that??? I've gone through both scos and all registers getting them set according to the tags...two days later things are plugged. And I'm talking 3 pink starburst boxes in three different spots (right in a row) three different prices...not one is correct! That's just one instance...very irritating!!"
-      },
-      {
-        "id": 8,
-        "comment": "Must be a store that is not busy ,our store is the total opposite"
-      },
-      {
-        "id": 9,
-        "comment": "Make sure them rotated...lol claims had a whole buggy full of EXPIRED candy....guess people must not he impulse buying it anymore.....?"
-      },
-      {
-        "id": 10,
-        "comment": "Every time (day) when i stock the juice in fresh i always zone up and rotate but i never plug. This looks very nice and clean and full. I take pride and a sense of accomplishment where i can find it at walmart."
-      }
-    ],
-    "topPosts": [
-      {
-        "id": 1,
-        "title": "Upvote this post to immediately delete the Walmart Radio"
-      },
-      {
-        "id": 2,
-        "title": "We may have a problem"
-      },
-      {
-        "id": 3,
-        "title": "Some moron brought a horse in my store"
-      },
-      {
-        "id": 4,
-        "title": "Associates are leaving in droves and customers STILL coming in. they said manager won't excuse occurrences tonight but they're also home. I guess 'what's good for me but not for the'"
-      },
-      {
-        "id": 5,
-        "title": "fuck walmart."
-      },
-      {
-        "id": 6,
-        "title": "Crossover with r/antiwork"
-      },
-      {
-        "id": 7,
-        "title": "My man brought all the chicken breast in the store, there goes our ftpr :("
-      },
-      {
-        "id": 8,
-        "title": "You can't deny this call out 😘😏🤭❄️🧊"
-      },
-      {
-        "id": 9,
-        "title": "'Excuse me, do you work here?'"
-      },
-      {
-        "id": 10,
-        "title":  "This is how we do it...."
-      },
-      {
-        "id": 11,
-        "title": "I have officially demoted myself to Walmart employee after being a sub lurker for a while!"
-      },
-      {
-        "id": 12,
-        "title": "Customers are really this dumb?"
-      },
-      {
-        "id": 13,
-        "title": "They took away almost all the seating in our break room, there’s literally not anywhere to sit most of the time. I’ve had to start taking my lunches at weird times to catch an empty chair 😭"
-      },
-      {
-        "id": 14,
-        "title": "Some sick freak was following a woman for 30 minutes jerking off to her until she found AP. She caught these images by putting her phone in her back pocket."
-      }
-    ]
-  }
+        {"good": "20", "neutral": "40", "bad": "40"}]},
+    { "id": 3,
+        "NumberOfComments": "5",
+        "PostText": "if y’all had 0 points and a day to call off for a chill day.. would you do it? i’m in a dilemma myself i want a chill day but i always worry about the possible consequences of calling out", 
+        "NumberOfUpvotes": "420",
+        "TopComments": [
+            {"id": 1, "comment":"Don’t make it a habit, one point isn’t gonna kill you", "polarity": 0},    
+            {"id": 2, "comment":"No better feeling then sitting home and getting paid.", "polarity": 0},
+            {"id": 3, "comment":"What consequences? At my store they call you out in front of everyone, but nothing else really besides pestering why. Had 9 callouts last night, do what ya gotta do and ride the point wave carefully.", "polarity": 0},    
+            {"id": 4, "comment":"The only thing that will happen at 0 points is you won’t get paid and you’ll be at 1 point.", "polarity": 0},    
+            {"id": 5, "comment":"Just do it. Do it do it. I have zero points, worked Fri called in Saturday used ppto, had Sunday off, called in Monday took the 1 point. And have Tuesday off . No my share bonuses anymore so no worries", "polarity": 0}],    
+            
+        "TopPostAnalyses": [
+            {"good": " ", "neutral": " ", "bad": " "}]},
+            
+            
+    {"id": 4,
+        "NumberOfComments": "32",
+        "PostText": "The amount of TCs at store level needs to be doubled. Bite the bullet corporate cheapskates.", 
+        "NumberOfUpvotes": "74",
+        "TopComments": [
+            {"id": 1, "comment":"Sorry to say, but they ain't gonna be buying any new tcs anytime soon. That's why they have the byod and the xcover pro phones", "polarity": 0},    
+            {"id": 2, "comment":"Best I can do is a shitty cell phone", "polarity": 0},
+            {"id": 3, "comment":"Ummm they are going away, nit getting more.", "polarity": 0},    
+            {"id": 4, "comment":"Then OGP will have twice as many to steal!", "polarity": 0},    
+            {"id": 5, "comment":"My store needs batteries!", "polarity": 0}],    
+            
+        "TopPostAnalyses": [
+            {"good": " ", "neutral": " ", "bad": " "}]},
+            
+            
+    {"id": 3,
+        "NumberOfComments": "6",
+        "PostText": "One week with the new vest…. My thoughts on it. They truly are horrible. Everybody is walking around filthy, some people have tried to wash them with little to no luck… most don’t care. Stains on everybody you see. Morale is low because everybody looks dirty and we can’t do anything about it. Non retractable box cutters and paper thin vests are not a good combo. I already have 2 holes in my pockets. It’s truly embarrassing to put this thing on when I clock in. Home Office if you’re reading this please just take the L and go back to the drawing board… I want to feel like a proud Walmart associate again , but these vests are dragging us all down.", 
+        "NumberOfUpvotes": "25",
+        "TopComments": [
+            {"id": 1, "comment":"I wish we could choose from a variety of vest designs and order what we like for our stores. It would give each store/department a unique sense of identity. Home office sending everyone ugly smurf vests and saying 'this is what you wear now' when no one asked is kind of insulting.", "polarity": 0},    
+            {"id": 2, "comment":"I love it. The store is already gross and disgusting so doubling down on how filthy everything is really ties the entire place together. Plus you can easily tell who is and is not working", "polarity": 0},
+            {"id": 3, "comment":"Our location never got the vests. I think they already gave up for us.", "polarity": 0},    
+            {"id": 4, "comment":"I gave up on the vest. I just wear the polo.", "polarity": 0},    
+            {"id": 5, "comment":"Yeah some places won't be getting them for a bit but they're coming for us all.", "polarity": 0}],    
+            
+        "TopPostAnalyses": [
+            {"good": " ", "neutral": " ", "bad": " "}]},
+            
+            
+    {"id": 4,
+        "NumberOfComments": "75",
+        "PostText": "Why do like to workers burn PPTO the second they receive enough? One of these, you’re gonna NEED it but won’t have the PPTO to cover it", 
+        "NumberOfUpvotes": "37",
+        "TopComments": [
+            {"id": 1, "comment":"Honestly? Because nobody wants to spend their life at work. I completely understand using PPTO to call in here and there, but what I don't get is the fuckers that stay a 4.5 points.", "polarity": 0},    
+            {"id": 2, "comment":"Same reason why walmart won't accept doctors notes. If walmart doesn't care, why should we.", "polarity": 0},
+            {"id": 3, "comment":"I live dangerously, that’s why.", "polarity": 0},    
+            {"id": 4, "comment":"I don't know about most of them, but I feel like I am in a depressive abusive relationship and have Stockholm syndrome", "polarity": 0},    
+            {"id": 5, "comment":"Because this company grinds you to the bones until you don't care enough to take your sick days when you're not sick. At my store that was the most common reason, but it came in many forms. Some people would call out, some would see how dead it was that day and leave, some would just dissapear after lunch once a week. Burn out is rampant at Walmart, even among the good employees.", "polarity": 0}],    
+            
+        "TopPostAnalyses": [
+            {"good": " ", "neutral": " ", "bad": " "}]},
+            
+            
+    {"id": 5,
+        "NumberOfComments": "27",
+        "PostText": "The points system is ridiculous. Home office, change it. Seriously, it’s insane. I got points for using PPTO (and having enough to cover it). My coach won’t remove them. The points system is so unfair for workers. Why don’t they bring back the old one? The points system needs to be reworked. I’m just venting and I doubt anything will come of it.", 
+        "NumberOfUpvotes": "32",
+        "TopComments": [
+            {"id": 1, "comment":"If you used PPTO they can’t give you points it’s automatically approved that’s why it’s called PPTO.", "polarity": 0},    
+            {"id": 2, "comment":"Open door it to the store manager. The system hasn't been automatically approving ppto so it has to be manually coded.", "polarity": 0},
+            {"id": 3, "comment":"If your ppto was approved and you got pointed, a manager will need to go to GTA Timesheet, choose past attendance expections. And then override using the option PPTO or Approved by manager. Forgot to add, if your coach wont fix it and you have proof (screen shot it) then keep going up the ladder", "polarity": 0},    
+            {"id": 4, "comment":"You need to gather a little evidence, first screenshot how much ppto you used and when. Then make sure the ppto was used on or after the missed day, not before. Then go to a coach and show them the evidence. If it's not resolved escalate it further. I've seen this happen on occasion, for instance, if you work half a day and go home, then put 4 hours of ppto in, It gives you a half a point because it doesn't recognize the lunch break. More than likely there is a mix up somewhere.", "polarity": 0},    
+            {"id": 5, "comment":"A coach can override ppto by giving you a half point for an incomplete shift if you used ppto for being late or leaving early even if you used the right amount and it was approved automatically. It happened to me.", "polarity": 0}],    
+            
+        "TopPostAnalyses": [
+            {"good": " ", "neutral": " ", "bad": " "}]}
+
+]
+}

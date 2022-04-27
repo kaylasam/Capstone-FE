@@ -22,7 +22,7 @@
 
 .p-dialog {
     background-color: white !important;
-    width: auto;
+    width: 500px !important;
 }
 
 .popup {
@@ -31,15 +31,18 @@
 
 :host ::ng-deep .p-dialog {
     background-color: white;
+    width: 500px !important;
 }
 
 :host ::ng-deep .p-element .p-dialog .p-component {
     background-color: green;
     z-index: 10034234;
+    width: 500px !important;
 }
 p-dialog .ui-dialog {
     overflow: scroll;
     max-height: 70%;
+    width: 400px !important;
   }
 .ul {
     float:left;
